@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-xgpush" version="4.2.0">
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-xgpush" version="4.2.1">
   <name>nedev-cordova-plugin-xgpush</name>
   <description>Tencent XGPush Plugin</description>
   <license>MIT</license>
@@ -31,36 +31,5 @@
     <source-file src="src/android/XGPushCallback.java" target-dir="src/net/sunlu/xgpush" />
     <!-- Tencent XGPush SDK  -->
    <framework src="sdk/android/build-extras.gradle" custom="true" type="gradleReference" />
-  </platform>
-  <!-- ios -->
-  <platform name="ios">
-    <config-file target="config.xml" parent="/*">
-      <feature name="XGPush">
-        <param name="ios-package" value="CDVXGPushPlugin" />
-        <param name="onload" value="true" />
-      </feature>
-    </config-file>
-    <config-file target="*-Info.plist" parent="XGPushMeta">
-      <dict>
-        <key>AccessID</key>
-        <integer>$IOS_ACCESS_ID</integer>
-        <key>AccessKey</key>
-        <string>$IOS_ACCESS_KEY</string>
-      </dict>
-    </config-file>
-    <!-- Tencent XGPush SDK -->
-    <header-file src="sdk/ios/XGPush.h" /> 
-    <source-file src="sdk/ios/libXG-SDK.a" framework="true" />
-    <!-- Cordova Plugin -->
-    <header-file src="src/ios/AppDelegate+CDVXGPush.h" />
-    <source-file src="src/ios/AppDelegate+CDVXGPush.m" />
-    <header-file src="src/ios/CDVXGPushPlugin.h" />
-    <source-file src="src/ios/CDVXGPushPlugin.m" />
-    <!-- Dependencies -->
-    <framework src="libz.tbd" />
-    <framework src="libsqlite3.0.tbd" />
-    <framework src="SystemConfiguration.framework" />
-    <framework src="CoreTelephony.framework" />
-    <framework src="UserNotifications.framework" />
   </platform>
 </plugin>
