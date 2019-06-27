@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-xgpush" version="4.2.1">
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-xgpush" version="4.2.2">
   <name>nedev-cordova-plugin-xgpush</name>
   <description>Tencent XGPush Plugin</description>
   <license>MIT</license>
@@ -10,8 +10,6 @@
    
   <preference name="ACCESS_ID" />
   <preference name="ACCESS_KEY" />
-  <preference name="IOS_ACCESS_ID" />
-  <preference name="IOS_ACCESS_KEY" />
   
   <js-module name="xgpush" src="www/xgpush.js">
     <clobbers target="xgpush" />
